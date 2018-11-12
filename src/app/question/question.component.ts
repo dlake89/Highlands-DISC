@@ -23,7 +23,7 @@ export class QuestionComponent implements OnInit {
   getJSON() {
     this.http.get<question[]>("../../assets/questions.json")
     .subscribe(x => {
-      this.list$ = x as question[];
+      this.list$ = x;
       this.currentQuestion = this.list$[0];
 
       console.log(x);
